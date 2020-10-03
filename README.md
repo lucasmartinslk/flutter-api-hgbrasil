@@ -1,6 +1,13 @@
 # flutter_api_valor_acao
 
-A new Flutter application.
+Projeto Flutter utilizando Dart. 
+
+App consome API da HG Brasil Finance. Realiza a busca da Ação solicitada e retorna algumas informações pernitentes no formato JSON.
+
+![image](https://user-images.githubusercontent.com/68522644/95001319-18444b80-059f-11eb-8e35-4fd9b3bb3350.png)
+
+Link da API: https://hgbrasil.com/
+
 
 ## Getting Started
 
