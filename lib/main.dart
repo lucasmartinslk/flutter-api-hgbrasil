@@ -24,6 +24,11 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   TextEditingController encontraAcao = TextEditingController();
   GlobalKey<FormState> cForm = GlobalKey<FormState>();
 
+  /////////////////////////////////////////
+  //INSERIR A CHAVE DA API NESSA VARIAVEL
+  var key = "Insira a Chave Aqui!";
+  /////////////////////////////////////////
+
   dynamic symbol = "Ação";
   dynamic empresa = "Empresa";
   dynamic moeda = "Moeda";
@@ -46,7 +51,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
     if(!cForm.currentState.validate())
       return;
     String x = encontraAcao.text.toUpperCase();
-    String url = "https://api.hgbrasil.com/finance/stock_price?key=ab42ba06&symbol=$x";
+    String url = "https://api.hgbrasil.com/finance/stock_price?key=$key&symbol=$x";
     Response resposta = await get(url);
     Map informa = json.decode(resposta.body);
     var resultado = informa["results"][encontraAcao.text];
